@@ -246,7 +246,7 @@ body { /* Style rules governing site body element */
     display: block;
     margin: auto;
     top: 12em;
-    margin-top: 12em;
+    margin-top: 10em;
     height: calc(100% - 26em);
     width: 100%;
     max-width: var(--desktop-size);
@@ -334,7 +334,8 @@ body { /* Style rules governing site body element */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--secondary-color);
+    font-size: 12pt;
+    background-color: var(--typography-primary-color);
     text-align: left;
     text-indent: 8pt;
 }
@@ -394,8 +395,10 @@ body.dark-mode .header {
 /* MEDIA SCREEN MOBILE */
 @media only screen and (max-width: 1080px), print {
     .page {
+        margin-top: 8em;
         width: calc(98% - 20px);
         padding: 8px;
+        height: calc(100% - 22em);
     }
     .page .about {
         text-align: center;
