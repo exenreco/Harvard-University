@@ -15,10 +15,10 @@
         <!-- Site Meta End -->
 
         <!-- Site Fonts Start -->
-        <link href="./Projects/Project 0 - Search/fonts/fontawesome-free-6.5.2-web/css/fontawesome.min.css" type="text/css" rel="stylesheet">
-        <link href="./Projects/Project 0 - Search/fonts/fontawesome-free-6.5.2-web/css/brands.min.css" type="text/css" rel="stylesheet">
-        <link href="./Projects/Project 0 - Search/fonts/fontawesome-free-6.5.2-web/css/solid.min.css" type="text/css" rel="stylesheet">
-        <link href="./Projects/Project 0 - Search/fonts/fontawesome-free-6.5.2-web/css/all.min.css" type="text/css" rel="stylesheet">
+        <link href="./deployment/fonts/fontawesome-free-6.5.2-web/css/fontawesome.min.css" type="text/css" rel="stylesheet">
+        <link href="./deployment/fonts/fontawesome-free-6.5.2-web/css/brands.min.css" type="text/css" rel="stylesheet">
+        <link href="./deployment/fonts/fontawesome-free-6.5.2-web/css/solid.min.css" type="text/css" rel="stylesheet">
+        <link href="./deployment/fonts/fontawesome-free-6.5.2-web/css/all.min.css" type="text/css" rel="stylesheet">
         <!-- Site Fonts Ends -->
 
         <!-- Site Stylesheets Start -->
@@ -40,8 +40,8 @@
 
             <!-- Header text Start -->
             <h1 class="heading">
-                <a class="link" href="./index.html">
-                    <img src="./deployment/images/logo.png">
+                <a title="home" class="link" href="./index.html">
+                    <img src="./deployment/images/school-logo.png" alt="school logo">
                 </a>
             </h1>
             <!-- Header text End -->
@@ -49,41 +49,55 @@
             <!-- Site Navigation Start -->
             <nav class="site-navigation">
                 <ul class="social-list">
-                    <li>
-                        <a class="social" href="https://www.x.com/exenreco" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
+                    <li title="Portfolio">
+                        <a class="social" href="https://www.exenreco.x10.mx" target="_blank">
+                            <img src="./deployment/images/logo.png" alt="portfolio logo">
                         </a>
                     </li>
-                    <li>
+                    <li title="Facebook">
                         <a class="social" href="https://www.facebook.com/exenreco" target="_blank">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li>
+                    <li title="Instagram">
                         <a class="social" href="https://www.instagram.com/exenreco" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
-                    <li>
+                    <li title="LinkedIn">
                         <a class="social" href="https://www.linkedin.com/in/exenreco" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li title="Twitter X">
+                        <a class="social" href="https://www.x.com/exenreco" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </li>
                 </ul>
                 <ul class="tools">
-                    <li>
-                        <div class="has-label">
-                            <label for="mode">Theme Mode:</label>
-                            <select name="mode" id="mode">
-                                <option class="option" value="auto" selected>Auto</option>
-                                <option class="option" value="dark">Dark Mode</option>
-                                <option class="option" value="light">Light Mode</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-gear"></i>
-                        <nav></nav>
+                    <li class="settings">
+                        <label for="toggle">
+                            <input id="toggle" type="checkbox" name="toggle" value="toggle">
+                            <i alt='' role="img" class="fa-solid fa-gear"></i>
+                        </label>
+                        <nav class="menu">
+                            <li>
+                                <div class="has-label">
+                                    <label for="mode">Theme Mode:</label>
+                                    <select name="mode" id="mode">
+                                        <option class="option" value="auto" selected>Auto</option>
+                                        <option class="option" value="dark">Dark Mode</option>
+                                        <option class="option" value="light">Light Mode</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./CS50's/Projects/Project 0 - Search/index.html">
+                                    Google Search
+                                </a>
+                            </li>
+                        </nav>
                     </li>
                 </ul>
             </nav>
@@ -95,35 +109,33 @@
         <!-- Main Site Content Start -->
         <main class="page">
             <section class="about">
-                <h3>Hello & Welcome!</h3>
+                <h3>Projects</h3>
+                <hr>
                 <p>
-                    All projects completed in the cs3 course are listed and can 
+                    All projects completed in the CS50's course are listed and can 
                     be accessed from this page.
                 </p>
             </section>
-            <section>
-                <h3>Projects</h3>
-                <ul class="project-list">
-                    <li><a class="link" href="./Projects/Project 0 - Search/index.html">
-                        <figure>
-                            <img src="./deployment/images/project-0.png" alt="Project 0 - search">
-                            <figcaption>
-                                Project 0 - <b>Search</b>
-                            </figcaption>
-                        </figure>
-                    </a></li>
-                    <li><a class="link" href="#">
-                        <figure>
-                            <!--<img src="./deployment/images/project-0.png" alt="Project 0 - search">-->
-                            <i role="img" class="fa-solid fa-file"></i>
-                            <figcaption>
-                                <!--Project 1 - <b>Search</b>-->
-                                Project 1 - <b>Coming Soon</b>
-                            </figcaption>
-                        </figure>
-                    </a></li>
-                </ul>
-            </section>
+            <ul class="project-list">
+                <li><a class="link" href="./CS50's/Projects/Project 0 - Search/index.html">
+                    <figure>
+                        <img src="./deployment/images/project-0.png" alt="Project 0 - search">
+                        <figcaption>
+                            Project 0 - <b>Search</b>
+                        </figcaption>
+                    </figure>
+                </a></li>
+                <li><a class="link" href="#">
+                    <figure>
+                        <!--<img src="./deployment/images/project-0.png" alt="Project 0 - search">-->
+                        <i role="img" class="fa-solid fa-file"></i>
+                        <figcaption>
+                            <!--Project 1 - <b>Search</b>-->
+                            Project 1 - <b>Coming Soon</b>
+                        </figcaption>
+                    </figure>
+                </a></li>
+            </ul>
         </main>
         <!-- Main Site Content End -->
 

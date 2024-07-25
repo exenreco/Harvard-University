@@ -5,9 +5,9 @@
 
     --icon-space: 1.3em;
     
-    --primary-color: rgb(26,115,232);
-    --primary-wash: rgba(26, 115, 232,0.8);
-    --secondary-color: rgb();
+    --primary-color: rgb(201,0,22);
+    --primary-wash: rgba(201,0,22, 0.2);
+    --secondary-color: rgb(173, 139, 58);
     --mat-black-color: rgba(1, 1, 1, 1);
 
     --desktop-size: 1920px;
@@ -38,6 +38,10 @@
     font-family: var(--typography-face);
 }
 
+hr {
+    border: 2px solid var(--primary-color);
+    margin-bottom: 14px;
+}
  
 /* GENERAL ELEMENT STYLE RULES */
 body { /* Style rules governing site body element */
@@ -65,7 +69,7 @@ body { /* Style rules governing site body element */
     color: var(--typography-secondary-color);
     z-index: 99;
     background-color: var(--primary-color);
-    border-bottom: 8px solid var(--primary-color);
+    border-bottom: 8px solid var(--secondary-color);
 }
 .header .heading { /* Style rules governing site header items */
     display: block;
@@ -102,12 +106,12 @@ body { /* Style rules governing site body element */
     left: 0;
     right: 0;
     border-radius: 100%;
-    border: 8px solid var(--primary-color);
+    border: 8px solid var(--secondary-color);
 }
 .header .heading .link img {
     position: relative;
     display: block;
-    width: 2em;
+    width: inherit;
     height: auto;
     margin: auto;
 }
@@ -135,6 +139,11 @@ body { /* Style rules governing site body element */
     align-items: left;
     justify-content: left;
 }
+.header .site-navigation .social-list li img {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+}
 .header .site-navigation .tools {
     font-size: 14pt;
     align-items: right;
@@ -154,20 +163,81 @@ body { /* Style rules governing site body element */
     color: var(--typography-secondary-color);
 }
 .header .site-navigation a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    filter:sepia(80%);
 }
 .header .site-navigation .tools li i {
     font-size: 18pt;
+    cursor: pointer;
 }
-.header .site-navigation .tools .has-label {
+
+/* SETTINGS OPTIONS */
+.header .site-navigation .tools .settings {
+    cursor: pointer;
+}
+.header .site-navigation .tools .settings label {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: unset;
+    justify-content: center;
+    padding: 8px;
+    margin: auto;
+}
+.header .site-navigation .tools .settings label input {
+    display: none;
+    visibility: hidden;
+}
+.header .site-navigation .tools .settings nav.menu {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    margin: auto;
+    left: -16.8em;
+    width: 18em;
+    border-radius: 5px;
+    border: 2px solid #444;
+    background-color: #333;
+}
+.header .site-navigation .tools .settings nav.menu li {
+    position: relative;
+    display: block;
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--typography-secondary-color);
+}
+.header .site-navigation .tools .settings nav.menu li a {
+    text-decoration: none;
+}
+.header .site-navigation .tools .settings nav.menu li:last-child {
+    border-bottom: none;
+}
+.header .site-navigation .tools .settings nav.menu li .has-label label {
     position: relative;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
+    justify-content: left;
+    align-items: left;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--typography-secondary-color);
+    background-color: transparent;
+    text-align: left;
+    font-size: 10pt;
+    padding: 0;
+    margin-bottom: 12px;
 }
-
+.header .site-navigation .tools .settings nav.menu li .has-label select {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.header .site-navigation .tools .settings:has( > label > input:checked ) {
+    color: var(--secondary-color);
+}
+.header .site-navigation .tools .settings:has( > label > input:checked ) nav.menu {
+    display: block;
+    visibility: visible;
+}
 
 
 /* SITE CONTENT CONTAINER */
@@ -177,10 +247,12 @@ body { /* Style rules governing site body element */
     margin: auto;
     top: 12em;
     margin-top: 12em;
-    height: calc(100% - 28em);
-    width: 1080px;
+    height: calc(100% - 26em);
+    width: 100%;
+    max-width: var(--desktop-size);
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 5px;
 }
 .page .about {
     margin-bottom: 3em;
@@ -239,7 +311,7 @@ body { /* Style rules governing site body element */
     width: 18em;
     height: 18em;
     overflow: hidden;
-    border: 5px solid var(--primary-color);
+    border: 5px solid var(--secondary-color);
     border-radius: 8px;
     background-color: var(--typography-primary-color);
 }
@@ -262,7 +334,7 @@ body { /* Style rules governing site body element */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--primary-wash);
+    background-color: var(--secondary-color);
     text-align: left;
     text-indent: 8pt;
 }
@@ -278,7 +350,7 @@ body.light-mode .header {
     background-color: var(--primary-color);
 }
 body.light-mode .header .heading .link {
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 
@@ -303,7 +375,47 @@ body.dark-mode .header {
         color: var(--typography-secondary-color);
         background-color: var(--mat-black-color);
     }
+}
+
+/* MEDIA SCREEN TABLET */
+@media only screen and (min-width: 1080px) and (max-width: 1920px ), print {
+    .page {
+        width: 98%;
+        padding: 8px;
+    }
+    .page .project-list {
+        flex-direction: row;
+    }
+    .page .project-list li {
+        margin: 12px;
+    }
+}
+
+/* MEDIA SCREEN MOBILE */
+@media only screen and (max-width: 1080px), print {
+    .page {
+        width: calc(98% - 20px);
+        padding: 8px;
+    }
+    .page .about {
+        text-align: center;
+    }
+    .page h3 {
+        text-align: center;
+    }
+    .page .project-list {
+        text-align: center;
+        flex-direction: column;
+    }
+    .page .project-list li {
+        margin: 12px;
+    }
     .page .project-list li a figure {
-        border-color: var(--primary-wash);
+        width: 90%;
+        height: 16em;
+    }
+    .page .project-list li a figure img {
+        width: 200%;
+        height: auto;
     }
 }
