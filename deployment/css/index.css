@@ -1,3 +1,309 @@
-body{
-    background-color: #333;
+:root { /* SITE VARIABLES */
+    --typography-face: Arial, 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    --typography-primary-color: #333;
+    --typography-secondary-color: #fff;
+
+    --icon-space: 1.3em;
+    
+    --primary-color: rgb(26,115,232);
+    --primary-wash: rgba(26, 115, 232,0.8);
+    --secondary-color: rgb();
+    --mat-black-color: rgba(1, 1, 1, 1);
+
+    --desktop-size: 1920px;
+    --tablet-size: 1080px;
+    --mobile-size: 800px;
+}
+
+* { /* RESET All BROWSER CSS */
+    /* margin reset */
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin: 0;
+    /* padding reset */
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding: 0;
+    /* border reset */
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border: 0;
+    /* set site typography */
+    font-family: var(--typography-face);
+}
+
+ 
+/* GENERAL ELEMENT STYLE RULES */
+body { /* Style rules governing site body element */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--typography-primary-color);
+}
+
+/* SITE HEADER STYLE RULES */
+.header { /* SITE HEADER: Style rules governing site header */
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 12em;
+    color: var(--typography-secondary-color);
+    z-index: 99;
+    background-color: var(--primary-color);
+    border-bottom: 8px solid var(--primary-color);
+}
+.header .heading { /* Style rules governing site header items */
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+}
+.header .heading, 
+.header .heading .link,
+.header .heading .link:link,
+.header .heading .link:visited,
+.header .heading .link:active,
+.header .heading .link:focus { /* Style rules governing heading and heading links */
+    color: var(--primary-color);
+    text-indent: 12pt;
+    text-decoration: none;
+}
+.header .heading .link:hover { /* Style rules governing heading and heading links on hover */
+    color: var(--typography-primary-color);
+}
+
+.header .heading .link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: var(--typography-primary-color);
+    margin: auto;
+    padding: 5px;
+    width: 5em;
+    height: 5em;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+    border: 8px solid var(--primary-color);
+}
+.header .heading .link img {
+    position: relative;
+    display: block;
+    width: 2em;
+    height: auto;
+    margin: auto;
+}
+.header .site-navigation {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-width: var(--desktop-size);
+    margin: auto;
+}
+.header .site-navigation .social-list,
+.header .site-navigation .tools {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+.header .site-navigation .social-list {
+    font-size: 18pt;
+    align-items: left;
+    justify-content: left;
+}
+.header .site-navigation .tools {
+    font-size: 14pt;
+    align-items: right;
+    justify-content: right;
+}
+.header .site-navigation .social-list li,
+.header .site-navigation .tools li {
+    position: relative;
+    display: inline-block;
+    margin: 8px;
+}
+.header .site-navigation a,
+.header .site-navigation a:link,
+.header .site-navigation a:visited,
+.header .site-navigation a:active,
+.header .site-navigation a:focus {
+    color: var(--typography-secondary-color);
+}
+.header .site-navigation a:hover {
+    color: var(--primary-color);
+}
+.header .site-navigation .tools li i {
+    font-size: 18pt;
+}
+.header .site-navigation .tools .has-label {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/* SITE CONTENT CONTAINER */
+.page {/* Style rules governing site content */
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 12em;
+    margin-top: 12em;
+    height: calc(100% - 28em);
+    width: 1080px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.page .about {
+    margin-bottom: 3em;
+}
+.page h3 {
+    margin-bottom: 1.2em;
+}
+.page .project-list {
+    display: flex;
+    position: relative;
+    flex: 1 1 auto;
+    justify-content: left;
+    font-weight: bold;
+    list-style: none;
+    list-style-type: none;
+    width: auto;
+    margin: auto;
+}
+.page .project-list li {
+    position: relative;
+    display: inline-block;
+    font-size: 14pt;
+    line-height: 42pt;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.page .project-list li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+}
+.page .project-list li .link,
+.page .project-list li .link:link,
+.page .project-list li .link:visited,
+.page .project-list li .link:active,
+.page .project-list li .link:focus {
+    position: relative;
+    display: block;
+    color: var(--typography-secondary-color);
+}
+.page .project-list li a:hover {
+    color: var(--wash-dark);
+    transition: color 40ms ease-in-out;
+}
+.page .project-list li a figure {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 18em;
+    height: 18em;
+    overflow: hidden;
+    border: 5px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--typography-primary-color);
+}
+.page .project-list li a figure img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+.page .project-list li a figure i {
+    position: relative;
+    display: block;
+    font-size: 82pt;
+    margin: 1em;
+}
+.page .project-list li a figure figcaption {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-wash);
+    text-align: left;
+    text-indent: 8pt;
+}
+
+
+/* LIGHT MODE COLOR SCHEME */
+body.light-mode {
+    color: var(--typography-primary-color);
+    background: var(--typography-secondary-color);
+}
+body.light-mode .header {
+    color: var(--typography-secondary-color);
+    background-color: var(--primary-color);
+}
+body.light-mode .header .heading .link {
+    border-color: var(--primary-color);
+}
+
+
+/* DARK MODE COLOR SCHEME */
+body.dark-mode {
+    color: var(--typography-secondary-color);
+    background: var(--typography-primary-color);
+}
+body.dark-mode .header {
+    color: var(--typography-secondary-color);
+    background-color: var(--mat-black-color);
+}
+
+
+/* AUTO MODE COLOR SCHEME */
+@media (prefers-color-scheme: dark) {
+    body{
+        color: var(--typography-secondary-color);
+        background-color: var(--typography-primary-color);
+    }
+    .header {
+        color: var(--typography-secondary-color);
+        background-color: var(--mat-black-color);
+    }
+    .page .project-list li a figure {
+        border-color: var(--primary-wash);
+    }
 }

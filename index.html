@@ -48,6 +48,44 @@
 
             <!-- Site Navigation Start -->
             <nav class="site-navigation">
+                <ul class="social-list">
+                    <li>
+                        <a class="social" href="https://www.x.com/exenreco" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://www.facebook.com/exenreco" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://www.instagram.com/exenreco" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://www.linkedin.com/in/exenreco" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tools">
+                    <li>
+                        <div class="has-label">
+                            <label for="mode">Theme Mode:</label>
+                            <select name="mode" id="mode">
+                                <option class="option" value="auto" selected>Auto</option>
+                                <option class="option" value="dark">Dark Mode</option>
+                                <option class="option" value="light">Light Mode</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <nav></nav>
+                    </li>
+                </ul>
             </nav>
             <!-- Site Navigation End -->
 
@@ -55,14 +93,42 @@
         <!-- Site Header & Navigation End -->
 
         <!-- Main Site Content Start -->
-        <main class="search-container">
-            <ul>
-                <li><a href="./Projects/Project 0 - Search/index.html">
-                    Project 0 - <b>Search</b>
-                </a></li>
-            </ul>
+        <main class="page">
+            <section class="about">
+                <h3>Hello & Welcome!</h3>
+                <p>
+                    All projects completed in the cs3 course are listed and can 
+                    be accessed from this page.
+                </p>
+            </section>
+            <section>
+                <h3>Projects</h3>
+                <ul class="project-list">
+                    <li><a class="link" href="./Projects/Project 0 - Search/index.html">
+                        <figure>
+                            <img src="./deployment/images/project-0.png" alt="Project 0 - search">
+                            <figcaption>
+                                Project 0 - <b>Search</b>
+                            </figcaption>
+                        </figure>
+                    </a></li>
+                    <li><a class="link" href="#">
+                        <figure>
+                            <!--<img src="./deployment/images/project-0.png" alt="Project 0 - search">-->
+                            <i role="img" class="fa-solid fa-file"></i>
+                            <figcaption>
+                                <!--Project 1 - <b>Search</b>-->
+                                Project 1 - <b>Coming Soon</b>
+                            </figcaption>
+                        </figure>
+                    </a></li>
+                </ul>
+            </section>
         </main>
         <!-- Main Site Content End -->
 
+        <!-- Scripts Starts -->
+        <script src="./deployment/scripts/script.js"></script>
+        <!-- Scripts Ends -->
     </body>
 </html>
