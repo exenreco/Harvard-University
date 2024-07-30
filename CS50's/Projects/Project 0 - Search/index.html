@@ -40,7 +40,7 @@
 
             <!-- Header text Start -->
             <h1 class="heading">
-                <a class="link" href="./index.html">Google</a>
+                <a class="link" href="./index.html" aria-label="hidden">Google</a>
             </h1>
             <!-- Header text End -->
 
@@ -65,15 +65,51 @@
 
         <!-- Main Site Content Start -->
         <main class="search-container">
-            <form class="form" action="https://google.com/search">
+            <form id="search_form" name="search_form" class="form" action="https://google.com/search" method="get">
                 <h1 class="heading">Google</i></h1>
-                <input class="search-bar" type="text" name="q" placeholder="Search">
-                <div class="buttons">
-                    <button type="submit" class="search-button">Google Search</button>
+                <input id="search-input" class="search-bar" type="text" name="q" placeholder="Search">
+                <div class="btn-container">
+                    <input id="search" type="submit" class="search-button button" value="Google Search">
+                    <input id="lucky" type="submit" class="search-button button" value="I'm Feeling Lucky">
+                    <div class="gbqfba gbqfba-hvr button" role="presentation" aria-label="" tabindex="-1">
+                        <div class="container">
+                            <div role="presentation">
+                                <span>I'm Feeling Curious</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Hungry</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Adventurous</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Playful</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Stellar</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Doodley</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Trendy</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Artistic</span>
+                            </div>
+                            <div role="presentation">
+                                <span>I'm Feeling Funny</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </form>
         </main>
         <!-- Main Site Content End -->
 
+        <!-- Site Scripts Start -->
+        <script src="./scripts/script.js"></script>
+        <!-- Site Scripts End -->
     </body>
 </html>
