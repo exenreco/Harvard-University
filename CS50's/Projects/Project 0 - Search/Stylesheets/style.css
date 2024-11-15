@@ -38,8 +38,6 @@
 }
 
 
-
-
  
 /* GENERAL ELEMENT STYLE RULES */
 body { /* Style rules governing site body element */
@@ -150,7 +148,6 @@ body { /* Style rules governing site body element */
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
     top: 5em;
@@ -198,22 +195,6 @@ body { /* Style rules governing site body element */
 }
 
 
-.animate-up {
-    animation-name: slideInFromTop;
-    animation-duration: 350ms;
-}
-.animate-down {
-    animation-name: slideInFromBottom;
-    animation-duration: 350ms;
-}
-@keyframes slideInFromBottom {
-    from { transform: translateY(0); }
-    to { transform: translateY(-300px); }
-}
-@keyframes slideInFromTop {
-    from { transform: translateY(-300px); }
-    to { transform: translateY(0); }
-}
 
 /* BUTTON STYLE RULES */
 .search-container > .form .btn-container { /* Style rules governing button container */
@@ -245,6 +226,7 @@ body { /* Style rules governing site body element */
 }
 .search-container > .form .btn-container input[type="submit"]#search,
 .search-container > .form .btn-container input[type="submit"]#lucky,
+.search-container > .form .btn-container .search-button,
 .search-container > .form .btn-container .gbqfba {
     color: white;
     border-radius: 5px;
@@ -253,6 +235,8 @@ body { /* Style rules governing site body element */
 .search-container > .form .btn-container .gbqfba {
     position: absolute;
     display: none;
+    flex: 1 1 auto;
+    flex-direction: row;
     left: calc(50% + 5px);
     width: calc(14em - 5px);
     padding: 0;
@@ -261,6 +245,8 @@ body { /* Style rules governing site body element */
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 .search-container > .form .btn-container input[type="submit"]#lucky,
@@ -272,14 +258,12 @@ body { /* Style rules governing site body element */
     transition: all 100ms ease-in-out;
 }
 .search-container > .form .btn-container .gbqfba .container {
-    position: absolute;
+    position: relative;
     display: flex;
     flex: 1 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 0px; 
-    right: 0px;
     width: 90%;
     margin: auto;
     margin-left: auto;
